@@ -57,13 +57,13 @@ const Dashboard = () => {
               title="Department"
               options={departments}
               selected={filters.departments}
-              onChange={(departments) => setFilters(prev => ({ ...prev, departments }))}
+              onChange={(departments) => setFilters(prev => ({ ...prev, departments: departments as string[] }))}
             />
             <FilterDropdown
               title="Rating"
               options={[1, 2, 3, 4, 5]}
               selected={filters.ratings}
-              onChange={(ratings) => setFilters(prev => ({ ...prev, ratings }))}
+              onChange={(ratings) => setFilters(prev => ({ ...prev, ratings: ratings as number[] }))}
             />
           </div>
         </div>
